@@ -1,4 +1,5 @@
 <script type="text/javascript">
+<<<<<<< HEAD
   var guess,
       answer = colors[random],
       hint1 = 'Try a warmer color..',
@@ -55,5 +56,75 @@
 }; 
 
 guess = prompt('Try to guess a color in the rainbow within 3 tries. What is your first guess?');
+=======
+	var guess,
+		answer,
+		hint1,
+		random,
+		hint2,
+		colors,
+		count;
+
+	guess = prompt('Try to guess a color in the rainbow within 3 tries. What is your first guess?');
+	random = Math.floor(Math.random()* 6)
+	colors = ['red','orange','yellow','green','blue','indigo','violet'];
+	answer = colors[random];
+	count = 0;
+
+	hint1 = 'Try a warmer color..';
+	hint2 = 'Try a cooler color..';
+
+
+
+
+
+	while(count<3){
+		if (guess == answer){
+			alert('you are correct! ' + 'it was ' + answer + '!');
+			count=4;
+		} else if(answer == 'red') {	
+			alert('Wrong! ' + hint1);
+			guess = prompt('Guess again.');
+			count++;
+		} else if(answer == 'orange') {	
+			alert('Wrong! ' + hint1);
+			guess = prompt('Guess again.');
+			count++;
+		} else if(answer == 'yellow') {	
+			alert('Wrong! ' + hint1);
+			guess = prompt('Guess again.');
+			count++;
+		} else if(answer == 'green'){
+			alert('Wrong! ' + hint2);
+			guess = prompt('Guess again.');
+			count++;
+		} else if(answer == 'blue'){
+			alert('Wrong! ' + hint2);
+			guess = prompt('Guess again.');
+			count++;
+		} else if(answer == 'indigo'){
+			alert('Wrong! ' + hint2);
+			guess = prompt('Guess again.');
+			count++;
+		} else if(answer == 'violet'){
+			alert('Wrong! ' + hint2);
+			guess = prompt('Guess again.');
+			count++;
+		} else if(incorrect){
+			alert('Was that a real color??');
+			guess = prompt('Guess again.');
+			count++;
+		}
+	if (count > 0){
+		hint1 = 'Try a different warm color.';
+		hint2 = 'Try a different cool color.';
+
+	}
+	if (count==3){
+		alert('Sorry, you lose... the answer was ' + answer);
+	}
+} 
+
+>>>>>>> 72abed57c472af5a41376ed7a31644cefc4d62df
 
 </script>
