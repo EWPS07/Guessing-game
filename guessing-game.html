@@ -15,39 +15,16 @@
     if (guess == answer){
       alert('you are correct! ' + 'it was ' + answer + '!');
       count=4
-    } else if(answer == 'red') {  
+    } else if(answer == 'red'|| answer == 'orange' || answer == 'yellow') {  
       alert('Wrong! ' + hint1);
       guess = prompt('Guess again.');
       count++;
-    } else if(answer == 'orange') { 
-      alert('Wrong! ' + hint1);
-      guess = prompt('Guess again.');
-      count++;
-    } else if(answer == 'yellow') { 
-      alert('Wrong! ' + hint1);
-      guess = prompt('Guess again.');
-      count++;
-    } else if(answer == 'green'){
+    } else if(answer == 'green'|| answer == 'blue' || answer == 'indigo' || answer == 'violet'){
       alert('Wrong! ' + hint2);
-      guess = prompt('Guess again.');
-      count++;
-    } else if(answer == 'blue'){
-      alert('Wrong! ' + hint2);
-      guess = prompt('Guess again.');
-      count++;
-    } else if(answer == 'indigo'){
-      alert('Wrong! ' + hint2);
-      guess = prompt('Guess again.');
-      count++;
-    } else if(answer == 'violet'){
-      alert('Wrong! ' + hint2);
-      guess = prompt('Guess again.');
-      count++;
-    } else{
-      alert('Was that a real color??');
       guess = prompt('Guess again.');
       count++;
     }
+    
   if (count > 0){
     hint1 = 'Try a different warm color.';
     hint2 = 'Try a different cool color.';
@@ -56,8 +33,6 @@
   if (count == 3){
     alert('Sorry, you lose... the answer was ' + answer);
   }
-}; 
-
-
+};
 
 </script>
